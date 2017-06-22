@@ -99,20 +99,49 @@
             <div class="form-group" ng-class="{ 'has-error' : facilitadorForm.celular.$error.required && !facilitadorForm.celular.$pristine }">
                 <label for="celular" class="col-sm-2 control-label">Telefone Celular (com DDD) *</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="celular" name="celular" placeholder="Telefone Celular" ng-model="facilitador.celular" required>
+                    <input type="text" class="form-control" id="celular" name="celular" placeholder="(__) _____-____" ng-model="facilitador.celular" ui-mask="{{'(99) 99999-9999'}}" required>
                     <span ng-show="facilitadorForm.celular.$error.required && !facilitadorForm.celular.$pristine" class="help-block">O telefone celular é obrigatório.</span>
                 </div>
             </div>
             <div class="form-group">
                 <label for="phone" class="col-sm-2 control-label">Telefone Fixo (com DDD)</label>
                 <div class="col-sm-10">
-                    <input type="tel" class="form-control" id="fixo" name="fixo" placeholder="Telefone fixo" ng-model="facilitador.fixo">
+                    <input type="tel" class="form-control" id="fixo" name="fixo" placeholder="(__) ____-____" ui-mask="{{'(99) 9999-9999'}}" ng-model="facilitador.fixo">
                 </div>
             </div>
             <div class="form-group" ng-class="{ 'has-error' : facilitadorForm.uf.$error.required && !facilitadorForm.uf.$pristine }">
                 <label for="uf" class="col-sm-2 control-label">UF *</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="uf" name="uf" placeholder="UF" ng-model="facilitador.uf" required>
+                <div class="col-sm-10">                  
+                    <select class="form-control" id="uf" name="uf" ng-model="facilitador.uf" required>
+                      <option value="">---Selecione um Estado---</option>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
                     <span ng-show="facilitadorForm.uf.$error.required && !facilitadorForm.uf.$pristine" class="help-block">A UF é obrigatória.</span>
                 </div>
             </div>
