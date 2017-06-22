@@ -4,13 +4,13 @@
     "connector": "memory"
   },
   "mongoDS": {
-    "host": "localhost",
-    "port": 27017,
-    "url": "mongodb://localhost:27017/accesseduca",
+    "host": "ds113702.mlab.com",
+    "port": 13702,
+    "url": "mongodb://administrador:pr3gu30b3m@ds113702.mlab.com:13702/accesseduca",
     "database": "accesseduca",
-    "password": "",
+    "password": "pr3gu30b3m",
     "name": "mongoDS",
-    "user": "",
+    "user": "administrador",
     "connector": "mongodb"
   }
 }

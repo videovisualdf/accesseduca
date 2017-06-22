@@ -6,7 +6,7 @@ module.exports = function (app) {
     Usuario.find({ where: { username: 'admin' }, limit: 1 }, function (err, users) {
       if (users.length == 0) {
         Usuario.create([
-          { username: 'admin', email: 'admin@admin.com', password: 'admin', admin: true }
+          { username: 'administrador', email: 'admin@admin.com', password: 'pr3gu30b3m', admin: true }
         ], function (err, users) {
           if (err) throw(err);
 
