@@ -19,10 +19,10 @@
         <div uib-accordion-group class="panel-success" class="panel-default col-xs-12 col-sm-6 col-lg-4" ng-repeat="facilitador in facilitadores" is-open="expandir">
           <uib-accordion-heading>
             <div class="row">
-              <div class="col-xs-1">
-                <img class="img-circle img-responsive" width="30" height="30" ng-src="{{facilitador.foto}}"/>
+              <div class="col-xs-2">
+                <img class="img-circle" width="30" height="30" ng-src="{{facilitador.foto}}"/>
               </div>
-              <div class="col-xs-10">
+              <div class="col-xs-9">
                 <p><small>Nome: <b>{{facilitador.nome}}</b></small></p>
                 <p><small>Prof.:<b>{{facilitador.profissao}}</b> Tel: <b>{{facilitador.fixo}}</b> Cel: <b>{{facilitador.celular}}</b></small></p>
               </div>
@@ -40,11 +40,11 @@
             </div>
           </div>
           <div class="row">
-            <div class="btn-group col-xs-12" role="group" aria-label="...">
-              <a ng-href="http://{{facilitador.facebook}}" role="button" class="btn btn-primary icons-sm fb-ic" target="_blank"><i class="fa fa-facebook"> </i></a>
-              <a ng-href="http://{{facilitador.twitter}}" role="button" class="btn btn-default icons-sm tw-ic" target="_blank"><i class="fa fa-twitter"> </i></a>
-              <a ng-href="http://{{facilitador.linkedin}}" role="button" class="btn btn-success icons-sm li-ic" target="_blank"><i class="fa fa-linkedin"> </i></a>
-              <a ng-href="http://{{facilitador.instagram}}" role="button" class="btn btn-danger icons-sm ins-ic" target="_blank"><i class="fa fa-instagram"> </i></a>
+            <div class="btn-group btn-group-justified col-xs-12" role="group" aria-label="...">
+              <a ng-href="http://{{facilitador.facebook}}" role="button" class="btn btn-primary icons-lg fb-ic" target="_blank"><i class="fa fa-facebook"> </i></a>
+              <a ng-href="http://{{facilitador.twitter}}" role="button" class="btn btn-default icons-lg tw-ic" target="_blank"><i class="fa fa-twitter"> </i></a>
+              <a ng-href="http://{{facilitador.linkedin}}" role="button" class="btn btn-success icons-lg li-ic" target="_blank"><i class="fa fa-linkedin"> </i></a>
+              <a ng-href="http://{{facilitador.instagram}}" role="button" class="btn btn-danger icons-lg ins-ic" target="_blank"><i class="fa fa-instagram"> </i></a>
             </div>
           </div>
         </div>

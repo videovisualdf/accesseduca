@@ -45,7 +45,7 @@
                   </thead>
                   <tbody>
                     <tr ng-repeat="fac in facilitadores | filter: {nome: filtraNome}">
-                        <td><a ng-click="editFacilitador(fac)"><img width="60" class="img-circle img-responsive" height="60" ng-src="{{fac.foto}}"/></a></td>
+                        <td><a ng-click="editFacilitador(fac)"><img width="60" class="img-circle" height="60" ng-src="{{fac.foto}}"/></a></td>
                         <td><a ng-click="editFacilitador(fac)">{{fac.nome}}</a></td>
                         <td><a ng-click="editFacilitador(fac)">{{fac.profissao}}</a></td>
                         <td><a ng-click="editFacilitador(fac)">{{fac.email}}</a></td>
