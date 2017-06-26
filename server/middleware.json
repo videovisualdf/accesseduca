@@ -14,7 +14,10 @@
     "helmet#xssFilter": {},
     "helmet#frameguard": {
       "params": [
-        "deny"
+        {
+          "action": "allow-from",
+          "domain": "http://videovisual.pe.hu/"
+        }
       ]
     },
     "helmet#hsts": {
