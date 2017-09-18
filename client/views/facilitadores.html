@@ -6,10 +6,15 @@
              <li class="active">Facilitadores Por Estado - {{estado}}</li>
          </ul>
       </div>
-      <div class="col-xs-12">
-         <h3>Facilitadores Cadastrados - {{estado}}</h3>
-         <a ng-click="expandir = !expandir">Expandir/Recuar Todos</a>
-         <hr>
+      <div class="row">
+        <div class="col-xs-6">
+           <h3>Facilitadores Cadastrados - {{estado}}</h3>
+           <a ng-click="expandir = !expandir">Expandir/Recuar Todos</a>
+           <hr>
+        </div>
+        <div class="col-xs-6">
+          <a type="button" class="button btn btn-success" ui-sref="app.novo-facilitador">Gostaria de se tornar um facilitador? Clique Aqui!</a>
+        </div>
       </div>
   </div>
   <!-- accordion angular-ui-bootstarp -->
@@ -19,11 +24,13 @@
         <div uib-accordion-group class="panel-success" class="panel-default col-xs-12 col-sm-6 col-lg-4" ng-repeat="facilitador in facilitadores" is-open="expandir">
           <uib-accordion-heading>
             <div class="row">
-              <div class="col-xs-4 text-center">
-                <!--
+              <div class="col-xs-4 text-center meuContainer">
+
+                <img class="img-circle" ng-src="{{facilitador.foto}}"/>
+              <!--
                 <img class="img-circle" width="40" height="40" ng-src="{{facilitador.foto}}"/>
-              -->
                 <img class="img-circle" style="vertical-align: middle; min-height: 40; max-height: 80; max-width: 100%; display: block; height: auto;"  ng-src="{{facilitador.foto}}"/>
+                -->
               </div>
               <div class="col-xs-7">
                 <p><small>Nome: <b>{{facilitador.nome}}</b></small></p>

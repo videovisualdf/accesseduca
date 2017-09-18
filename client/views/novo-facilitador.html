@@ -1,76 +1,7 @@
 <div class="container">
-  <div class="row">
-      <div class="col-xs-12">
-         <ul class="breadcrumb">
-             <li><a  ui-sref="app">Home</a></li>
-             <li class="active">Gerenciar Facilitadores</li>
-         </ul>
-      </div>
-      <div class="col-xs-12">
-         <h3>Facilitadores Cadastrados</h3>
-         <hr>
-      </div>
-  </div>
-  <div class="row row-content">
-      <div class="col-xs-12">
-        <h4>Buscar Facilitador &nbsp;&nbsp;&nbsp;
-           <small>Nome: &nbsp;
-                <input ng-model="filtraNome">
-           </small>
-        </h4>
-      </div>
-      <div class="col-xs-12" ng-if="showFacilitadores">
-            <div class="no-more-tables">
-              <!--
-                <table class="table table-striped table-bordered">
-              -->
-                <table >
-                  <thead>
-                    <tr>
-                        <th class="thead-inverse">Foto</th>
-                        <th class="thead-inverse">UF</th>
-                        <th class="thead-inverse">Ativo</th>
-                        <th class="thead-inverse">Nome</th>
-                        <th class="thead-inverse">Profissão</th>
-                        <th class="thead-inverse">Email</th>
-                        <th class="thead-inverse">Cel</th>
-                        <th class="thead-inverse">Fixo</th>
-                        <th class="thead-inverse">Cidade</th>
-                        <th class="thead-inverse">Facebook</th>
-                        <th class="thead-inverse">Instagram</th>
-                        <th class="thead-inverse">Twitter</th>
-                        <th class="thead-inverse">Linkedin</th>
-                        <th class="thead-inverse">Site</th>
-                        <th class="thead-inverse">CV</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr ng-repeat="fac in facilitadores | filter: {nome: filtraNome}">
-                        <td><a ng-click="editFacilitador(fac)"><img width="60" class="img-circle" height="60" ng-src="{{fac.foto}}"/></a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.uf}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.ativo}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.nome}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.profissao}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.email}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.celular}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.fixo}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.cidade}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.facebook}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.instagram}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.twitter}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.linkedin}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.site}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.curriculum}}</a></td>
-                    </tr>
-                  </tbody>
-                </table>
-            </div>
-      </div>
-  </div>
-
   <div id="cadastro" class="row row-content">
       <div class="col-xs-12">
-          <h3>Criar/Alterar/Excluir Facilitadores</h3>
+          <h3>Registrar Novo Facilitador</h3>
       </div>
       <div class="col-xs-12 col-sm-9">
           <form class="form-horizontal" name="facilitadorForm" ng-submit="saveFacilitador()" novalidate>
@@ -79,16 +10,6 @@
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="nome" name="nome" placeholder="Entrar nome completo" ng-model="facilitador.nome" required>
                     <span ng-show="facilitadorForm.nome.$error.required && !facilitadorForm.nome.$pristine" class="help-block">O nome do facilitador é obrigatório.</span>
-                </div>
-            </div>
-            <div class="form-group" ng-class="{ 'has-error' : facilitadorForm.ativo.$error.required && !facilitadorForm.ativo.$pristine }">
-                <label for="ativo" class="col-sm-2 control-label">Ativo *</label>
-                <div class="col-sm-10">
-                    <select class="form-control" id="ativo" name="ativo" ng-model="facilitador.ativo" required>
-                      <option value="S">SIM</option>
-                      <option value="N">NÃO</option>
-                    </select>
-                    <span ng-show="facilitadorForm.ativo.$error.required && !facilitadorForm.ativo.$pristine" class="help-block">O status do facilitador é obrigatório.</span>
                 </div>
             </div>
             <div class="form-group" ng-class="{ 'has-error' : facilitadorForm.profissao.$error.required && !facilitadorForm.profissao.$pristine }">
