@@ -6,11 +6,11 @@
   "mongoDS": {
     "host": "ds113702.mlab.com",
     "port": 13702,
-    "url": "mongodb://administrador:pr3gu30b3m@ds113702.mlab.com:13702/accesseduca",
+    "url": MONGO_CREDENTIALS,
     "database": "accesseduca",
-    "password": "pr3gu30b3m",
+    "password": "",
     "name": "mongoDS",
-    "user": "administrador",
+    "user": "",
     "connector": "mongodb"
   }
 }
