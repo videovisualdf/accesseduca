@@ -4,8 +4,13 @@
     "connector": "memory"
   },
   "mongoDS": {
-    "url": MONGO_CREDENTIALS,
+    "host": "ds113702.mlab.com",
+    "port": 13702,
+    "url": "mongodb://administrador:pr3gu30b3m@ds113702.mlab.com:13702/accesseduca",
+    "database": "accesseduca",
+    "password": "pr3gu30b3m",
     "name": "mongoDS",
+    "user": "administrador",
     "connector": "mongodb"
   }
 }
