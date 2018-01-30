@@ -20,7 +20,7 @@
         </h4>
       </div>
       <div class="col-xs-12" ng-if="showFacilitadores">
-            <div class="no-more-tables">
+            <div id="no-more-tables">
               <!--
                 <table class="table table-striped table-bordered">
               -->
@@ -46,21 +46,21 @@
                   </thead>
                   <tbody>
                     <tr ng-repeat="fac in facilitadores | filter: {nome: filtraNome}">
-                        <td><a ng-click="editFacilitador(fac)"><img width="60" class="img-circle" height="60" ng-src="{{fac.foto}}"/></a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.uf}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.ativo}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.nome}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.profissao}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.email}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.celular}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.fixo}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.cidade}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.facebook}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.instagram}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.twitter}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.linkedin}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.site}}</a></td>
-                        <td><a ng-click="editFacilitador(fac)">{{fac.curriculum}}</a></td>
+                        <td class="no-more-tables" data-title="Foto"><a ng-click="editFacilitador(fac)"><img width="60" class="img-circle" height="60" ng-src="{{fac.foto}}"/></a></td>
+                        <td data-title="UF"><a ng-click="editFacilitador(fac)">{{fac.uf}}</a></td>
+                        <td data-title="Ativo"><a ng-click="editFacilitador(fac)">{{fac.ativo}}</a></td>
+                        <td data-title="Nome"><a ng-click="editFacilitador(fac)">{{fac.nome}}</a></td>
+                        <td data-title="Profissão"><a ng-click="editFacilitador(fac)">{{fac.profissao}}</a></td>
+                        <td data-title="E-mail"><a ng-click="editFacilitador(fac)">{{fac.email}}</a></td>
+                        <td data-title="Celular"><a ng-click="editFacilitador(fac)">{{fac.celular}}</a></td>
+                        <td data-title="Fixo"><a ng-click="editFacilitador(fac)">{{fac.fixo}}</a></td>
+                        <td data-title="Cidade"><a ng-click="editFacilitador(fac)">{{fac.cidade}}</a></td>
+                        <td data-title="Facebook"><a ng-click="editFacilitador(fac)">{{fac.facebook}}</a></td>
+                        <td data-title="Instagram"><a ng-click="editFacilitador(fac)">{{fac.instagram}}</a></td>
+                        <td data-title="Twitter"><a ng-click="editFacilitador(fac)">{{fac.twitter}}</a></td>
+                        <td data-title="Linkedin"><a ng-click="editFacilitador(fac)">{{fac.linkedin}}</a></td>
+                        <td data-title="Site"><a ng-click="editFacilitador(fac)">{{fac.site}}</a></td>
+                        <td data-title="CV"><a ng-click="editFacilitador(fac)">{{fac.curriculum}}</a></td>
                     </tr>
                   </tbody>
                 </table>
