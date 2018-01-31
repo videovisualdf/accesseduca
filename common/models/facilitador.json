@@ -57,7 +57,8 @@
     },
     "ativo": {
       "type": "string",
-      "required": true
+      "required": true,
+      "default": "N"
     }
   },
   "validations": [],
