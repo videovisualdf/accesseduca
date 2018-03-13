@@ -65,8 +65,7 @@ angular.module('accesseducaApp')
   ])
   .controller('LoginController', ['$scope', '$localStorage', 'AuthService', 'ngDialog', function($scope, $localStorage, AuthService, ngDialog) {
     $scope.loginData = $localStorage.getObject('userinfo', '{}');
-    $scope.doLogin = function() {
-      console.log($scope.loginData);
+    $scope.doLogin = function() {      
       if ($scope.rememberMe)
         $localStorage.storeObject('userinfo', $scope.loginData);
       AuthService.login($scope.loginData);
