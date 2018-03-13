@@ -1,57 +1,38 @@
 <div class="container">
   <div class="row">
-      <div class="col-xs-12">
-         <ul class="breadcrumb">
-             <li><a  ui-sref="app">Mapa</a></li>
-             <li class="active">Facilitadores Por Estado - {{estado}}</li>
-         </ul>
-      </div>
-<!--
-      <div class="row">
-    -->
-        <div class="col-xs-12">
-           <h3 align="center">Facilitadores Cadastrados - {{estado}}</h3>
-           <a ng-click="expandir = !expandir">Expandir/Recuar Todos</a>
-           <hr>
-        </div>
-        <div align="center" class="col-xs-12">
-          <a align="center" type="button" class="button btn btn-success" ui-sref="app.novo-facilitador">Cadastrar novo terapeuta<br>Clique Aqui!</a>
-          <hr>
-        </div>
-<!--
-      </div>
-    -->
+    <div class="col-xs-12">
+      <ul class="breadcrumb">
+        <li><a ui-sref="accesseduca.publico.mapa">Mapa</a></li>
+        <li class="active">Facilitadores Por Estado - {{estado}}</li>
+      </ul>
+    </div>
+    <div class="col-xs-12">
+      <h3 align="center">Facilitadores Cadastrados - {{estado}}</h3>
+      <hr>
+    </div>
+    <div align="center" class="col-xs-12">
+      <a align="center" type="button" class="button btn btn-success" ui-sref="accesseduca.publico.novo-facilitador">Cadastrar novo terapeuta<br>Clique Aqui!</a>
+      <hr>
+    </div>
   </div>
   <!-- accordion angular-ui-bootstarp -->
   <div class="row row-content">
-    <div >
-      <uib-accordion close-others="true">
-        <div uib-accordion-group class="panel-success" class="panel-default col-xs-12 col-sm-6 col-lg-4" ng-repeat="facilitador in facilitadores" is-open="expandir">
+    <div>
+      <uib-accordion close-others="umPorVez">
+        <div uib-accordion-group class="panel-success" class="panel-default col-xs-12 col-sm-6 col-lg-4" ng-repeat="facilitador in facilitadores" is-open="expandirGrupo">
           <uib-accordion-heading>
             <div class="row">
               <div class="col-xs-4 text-center meuContainer">
-
-                <img class="img-circle" class="meuContainer" ng-src="{{facilitador.foto}}"/>
-              <!--
-                <img class="img-circle" width="60" height="60" ng-src="{{facilitador.foto}}"/>
-                <img class="img-circle" width="40" height="40" ng-src="{{facilitador.foto}}"/>
-                <img class="img-circle" style="vertical-align: middle; min-height: 40; max-height: 80; max-width: 100%; display: block; height: auto;"  ng-src="{{facilitador.foto}}"/>
-                -->
+                <img class="img-circle" class="" ng-src="{{facilitador.foto}}" />
               </div>
               <div class="col-xs-7">
                 <small>Nome: <b>{{facilitador.nome}}</b></small><br>
                 <small> Prof.: <b>{{facilitador.profissao}}</b></small><br>
                 <small> Tel: <b>{{facilitador.fixo}}</b></small><br>
                 <small> Cel: <b>{{facilitador.celular}}</b></small>
-                <!--
-                <p><small>Nome: <b>{{facilitador.nome}}</b></small></p>
-                <p><small> Prof.: <b>{{facilitador.profissao}}</b></small></p>
-                <p><small> Tel: <b>{{facilitador.fixo}}</b></small></p>
-                <p><small> Cel: <b>{{facilitador.celular}}</b></small></p>
-              -->
               </div>
               <div class="col-xs-1">
-                <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': expandir, 'glyphicon-chevron-right': !expandir}"></i>
+                <i class="pull-right glyphicon" ng-class="{'glyphicon-plus-sign': !expandir, 'glyphicon-minus-sign': expandir}" ng-click="inverte(expandir)"></i>
               </div>
             </div>
           </uib-accordion-heading>
@@ -75,6 +56,6 @@
       </uib-accordion>
     </div>
   </div>
-<!-- end accordion angular-ui-bootstarp -->
+  <!-- end accordion angular-ui-bootstarp -->
 
 </div>
