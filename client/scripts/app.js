@@ -2,64 +2,48 @@
 angular.module('accesseducaApp', ['ui.router', 'ngResource', 'ngDialog', 'lbServices', 'ui.bootstrap', 'ui.mask', 'images-resizer'])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
+     // route for the home page
       .state('accesseduca', {
-        templateUrl: 'views/accesseduca.html',
-        abstract: true
+        url:'/',
+        views: {
+            'conteudo': {
+                templateUrl : 'views/mapa.html',
+                controller  : 'CabecalhoController'
+            }
+        }
       })
-      .state('accesseduca.publico', {
-        templateUrl: 'views/publico.html',
-        abstract: true
+      .state('accesseduca.mapa', {
+        url:'',
+        views: {
+            'conteudo@': {
+                templateUrl : 'views/mapa.html',
+                controller  : 'CabecalhoController'
+            }
+        }
       })
-      .state('accesseduca.publico.mapa', {
-        url: '/',
-        templateUrl: 'views/mapa.html',
-        controller: 'CabecalhoController'
-      })
-      .state('accesseduca.publico.facilitadores', {
-        url: '/',
+      .state('accesseduca.facilitadores', {
+        url: '',
         params: {
           uf: null,
           ativo: 'S'
         },
-        templateUrl: 'views/facilitadores.html',
-        controller: 'FacilitadoresController'
-      })
-      .state('accesseduca.publico.novo-facilitador', {
-        url: '/',
-        templateUrl: 'views/novo-facilitador.html',
-        controller: 'FacilitadoresController'
-      })
-      .state('accesseduca.sistema', {
-        url: '/sistema',
-        templateUrl: 'views/sistema.html',
-        abstract: true
-      })
-      .state('accesseduca.sistema.inicio', {
-        url: '/',
         views: {
-          'cabecalho': {
-            templateUrl: 'views/cabecalho.html',
-            controller: 'CabecalhoController'
-          },
-          'conteudo': {
-            templateUrl: 'views/telalogin.html',
-            controller: 'LoginController'
+          'conteudo@': {
+              templateUrl : 'views/facilitadores.html',
+              controller  : 'FacilitadoresController'
           }
         }
       })
-      .state('accesseduca.sistema.facilitadores', {
-        url: '/',
+      .state('accesseduca.novo-facilitador', {
+        url: '',
         views: {
-          'cabecalho': {
-            templateUrl: 'views/cabecalho.html',
-            controller: 'CabecalhoController'
-          },
-          'conteudo': {
-            templateUrl: 'views/facilitadores-cadastro.html',
-            controller: 'FacilitadoresController'
+          'conteudo@': {
+              templateUrl : 'views/novo-facilitador.html',
+              controller  : 'FacilitadoresController'
           }
         }
-      });
+      })
+      ;
 
 
     $urlRouterProvider.otherwise('/');

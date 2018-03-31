@@ -45,7 +45,7 @@ angular.module('accesseducaApp')
       };
       $scope.openFacilitadoresPorEstado = function(estado) {
         //console.log('Entrou0');
-        $state.go('accesseduca.publico.facilitadores', {uf: estado});
+        $state.go('accesseduca.facilitadores', {uf: estado});
       };
       $rootScope.$on('login:Successful', function() {
         $scope.loggedIn = AuthService.isAuthenticated();
